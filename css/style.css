@@ -129,8 +129,9 @@
 
     nav ul.active {
         left: 0;
-        top: 4rem;
-        background-color: white;
+        top: 6.5rem;
+        background-color: var(--primary-color);
+        opacity: 0.97;
     }
 
     nav ul li {
