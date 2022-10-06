@@ -1,0 +1,375 @@
+/********** General **********/
+@media screen and (min-width: 0px) {
+
+    /* Variables */
+    :root {
+        --font-family: "Roboto", sans-serif;
+        --color-one: hsl(240, 0%, 95%);
+        --color-two: hsl(240, 0%, 75%);
+        --color-three: hsl(240, 0%, 55%);
+        --color-four: hsl(240, 0%, 35%);
+        --color-five: hsl(240, 0%, 15%);
+        --primary-color: hsl(201, 100%, 36%);
+    }
+
+    /* CSS Resets */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-family);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-five);
+    }
+
+    a:hover {
+        color: var(--color-three);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: var(--color-five);
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 60px;
+
+    }
+
+    h3 {
+        font-size: 48px;
+    }
+
+    h4 {
+        font-size: 36px;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    h6 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+/********** Navigation **********/
+/* Mobile Navbar */
+@media screen and (min-width: 0px) {
+    header {
+        /* position: sticky;
+        top: 0; */
+
+        /* or */
+
+        position: fixed;
+        width: 100%;
+
+        z-index: 2;
+    }
+
+    
+    header h5, a {
+        color: var(--color-one)
+    }
+    
+    header h5 {
+        font-family: 'Apple Chancery';
+        width: 160px;
+        /* border: 1px solid red; */
+        line-height: 1.2;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* height: 4rem; */
+        padding: 1rem;
+        background-color: var(--primary-color);
+    }
+
+    nav ul {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        left: -100%;
+        flex-direction: column;
+    }
+
+    nav ul.active {
+        left: 0;
+        top: 4rem;
+        background-color: white;
+    }
+
+    nav ul li {
+        margin: 1rem;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        background-color: var(--color-one);
+        height: 3px;
+        width: 25px;
+        margin: 5px;
+        display: block;
+    }
+}
+
+/* Desktop Navbar */
+@media screen and (min-width: 1024px) {
+    nav ul {
+        justify-content: center;
+        align-items: center;
+        position: static;
+        width: auto;
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/********** Hero Section **********/
+@media screen and (min-width: 0px) {
+    #hero {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 11rem;
+        padding-bottom: 6rem;
+        position: relative;
+    }
+    
+    #hero:before {
+        content: '';
+        background: url('../images/sleeping_bear.jpg');
+        background-size: cover;
+        position: absolute;
+        background-attachment: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: .3;
+    }
+
+    
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 700px;
+    }
+
+    .hero-text h2,
+    .hero-text p,
+    .hero-text a {
+        /* border: 1px solid red; */
+        text-align: center;
+        color: var(--color-one);
+        margin: 1.2rem;
+        z-index: 1;
+    }
+    
+    .hero-text p {
+        font-size: 20px;
+        /* margin-bottom: 50px; */
+    }
+    
+    .hero-text a {
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid var(--primary-color);
+    }
+    
+    .hero-text a:hover {
+        background-color: var(--color-three);
+    }
+}
+
+/********** What We Do **********/
+@media screen and (min-width: 0px) {
+    #what-we-do {
+        background-color: var(--color-one);
+        scroll-margin-top: 5.5rem;
+    }
+
+    .what-header {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .what-header p {
+        width: 700px;
+        margin: auto;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #what-we-do .cards .card {
+        background-color: var(--color-one);
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    #what-we-do .cards .card h6 {
+        margin-bottom: 1rem;
+    }
+}
+
+/********** Pricing **********/
+@media screen and (min-width: 0px) {
+    #pricing {
+        background-color: var(--color-one);
+        scroll-margin-top: 4rem;
+    }
+
+    .pricing-header {
+        margin-bottom: 40px;
+        width: 700px;
+        margin: auto;
+    }
+    
+    .pricing-header h4 {
+        text-align: center;   
+        width: 550px;
+        margin: auto;
+    }
+
+    .pricing-header p {
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #pricing .cards .card {
+        background-color: var(--color-two);
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px var(--color-five);
+    }
+
+        #pricing .cards .card h6 {
+            margin-bottom: 1rem;
+        }
+}
+
+/********** Contact **********/
+@media screen and (min-width:0px) {
+    #contact {
+        background-color: var(--color-three);
+        scroll-margin-top: 2rem;
+    }
+
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    #contact form label {
+        color: var(--color-five);
+        text-align: center;
+        margin-bottom: 0.4rem;
+    }
+
+    #contact form textarea,
+    input {
+        width: 95%;
+        margin-bottom: 1rem;
+    }
+
+    #contact form input {
+        height: 2.5rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    #contact form textarea,
+    input {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    #contact form textarea,
+    input {
+        width: 50%;
+    }
+}
+
+/********** Footer **********/
+footer {
+    background-color: var(--color-one);
+    color: var(--color-five);
+    text-align: center;
+    height: 4rem;
+}
+
+footer p {
+    padding-top: 1.5rem;
+}
