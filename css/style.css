@@ -172,6 +172,7 @@
 }
 
 /********** Hero Section **********/
+/* Mobile */
 @media screen and (min-width: 0px) {
     #hero {
         background-color: #000;
@@ -208,11 +209,14 @@
     .hero-text h2,
     .hero-text p,
     .hero-text a {
-        /* border: 1px solid red; */
         text-align: center;
         color: var(--color-one);
         margin: 1.2rem;
         z-index: 1;
+    }
+    
+    .hero-text h2 {
+        font-size: 38px;
     }
     
     .hero-text p {
@@ -231,11 +235,23 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .hero-text h2 {
+            font-size: 60px;
+        }
+}
+
 /********** What We Do **********/
+/* Mobile */
 @media screen and (min-width: 0px) {
     #what-we-do {
         background-color: var(--color-one);
         scroll-margin-top: 5.5rem;
+    }
+
+    .what-header,
+    .what-header p {
+        width: 95%;
     }
 
     .what-header {
@@ -244,7 +260,7 @@
     }
 
     .what-header p {
-        width: 700px;
+        /* width: 700px; */
         margin: auto;
     }
 
@@ -270,25 +286,33 @@
 }
 
 /********** Pricing **********/
+/* Mobile */
 @media screen and (min-width: 0px) {
     #pricing {
         background-color: var(--color-one);
         scroll-margin-top: 4rem;
     }
 
+    .pricing-header,
+    .pricing-header p {
+        width: 95%;
+    }
+
     .pricing-header {
         margin-bottom: 40px;
-        width: 700px;
-        margin: auto;
+        text-align: center;
+        /* width: 700px; */
+        /* margin: auto; */
     }
     
     .pricing-header h4 {
-        text-align: center;   
-        width: 550px;
-        margin: auto;
+        /* text-align: center;    */
+        /* width: 550px; */
+        /* margin: auto; */
     }
 
     .pricing-header p {
+        margin: auto;
         margin-bottom: 20px;
     }
 
@@ -310,62 +334,109 @@
             box-shadow: 10px 10px 10px var(--color-five);
     }
 
-        #pricing .cards .card h6 {
-            margin-bottom: 1rem;
+        #pricing .cards .card h6, 
+        #pricing .cards .card p {
+            color: var(--color-one);
         }
+
+    #pricing .cards .card h6 {
+        margin-bottom: 1rem;
+        color: var(--color-one);
+    }
 }
 
 /********** Contact **********/
 @media screen and (min-width:0px) {
     #contact {
-        background-color: var(--color-three);
+        background-color: var(--color-one);
         scroll-margin-top: 2rem;
     }
 
-    #contact form {
+    #contact .container {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+
+    #contact form, .contact-info {
+        background-color: #fff;
+        /* margin: auto; */
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         padding: 1rem;
     }
 
     #contact form label {
         color: var(--color-five);
-        text-align: center;
+        /* text-align: center; */
         margin-bottom: 0.4rem;
     }
 
     #contact form textarea,
     input {
-        width: 95%;
+        /* width: 95%; */
         margin-bottom: 1rem;
+        /* border: 1px solid red; */
     }
 
     #contact form input {
         height: 2.5rem;
     }
-}
 
-@media screen and (min-width:768px) {
+    .contact-info {
+        margin-top: 20px;
+    }
 
-    #contact form textarea,
-    input {
-        width: 75%;
+    .info-box {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        /* border: 1px solid red; */
+    }
+
+    .details {
+        /* border: 1px solid red; */
+    }
+
+    .info-box h6 {
+        margin-bottom: 10px;
+    }
+
+    .info-box a {
+        color: var(--color-five);
+    }
+
+    .contact-icon {
+        width: 20px;
+        margin-right: 20px;
+        /* border: 1px solid red; */
     }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
+    #contact form {
+        width: calc(100% - 400px)
+    }
+    .contact-info {
+        width: 350px;
+        margin-top: 0;
+    }
+}
+
+/* @media screen and (min-width:1024px) {
 
     #contact form textarea,
     input {
         width: 50%;
     }
-}
+} */
 
 /********** Footer **********/
 footer {
-    background-color: var(--color-one);
+    background-color: var(--color-three);
     color: var(--color-five);
     text-align: center;
     height: 4rem;
