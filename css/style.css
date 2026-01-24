@@ -1,6 +1,5 @@
 /********** General **********/
 @media screen and (min-width: 0px) {
-
     /* Variables */
     :root {
         --font-family: "Roboto", sans-serif;
@@ -105,7 +104,6 @@
     header h5 {
         font-family: 'Apple Chancery';
         width: 160px;
-        /* border: 1px solid red; */
         line-height: 1.2;
     }
     
@@ -113,7 +111,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* height: 4rem; */
         padding: 1rem;
         background-color: var(--primary-color);
     }
@@ -197,8 +194,6 @@
         opacity: .3;
     }
 
-    
-
     .hero-text {
         display: flex;
         flex-direction: column;
@@ -221,7 +216,6 @@
     
     .hero-text p {
         font-size: 20px;
-        /* margin-bottom: 50px; */
     }
     
     .hero-text a {
@@ -260,7 +254,6 @@
     }
 
     .what-header p {
-        /* width: 700px; */
         margin: auto;
     }
 
@@ -293,22 +286,14 @@
         scroll-margin-top: 4rem;
     }
 
-    .pricing-header,
-    .pricing-header p {
-        width: 95%;
+    .pricing-header {
+        width: 70%;
+        margin: auto;
     }
 
     .pricing-header {
         margin-bottom: 40px;
         text-align: center;
-        /* width: 700px; */
-        /* margin: auto; */
-    }
-    
-    .pricing-header h4 {
-        /* text-align: center;    */
-        /* width: 550px; */
-        /* margin: auto; */
     }
 
     .pricing-header p {
@@ -323,15 +308,15 @@
     }
 
     #pricing .cards .card {
-        background-color: var(--color-two);
-            display: flex;
-            flex-direction: column;
-            width: 20rem;
-            padding: 1rem;
-            margin: 1rem;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 10px 10px 10px var(--color-five);
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px var(--color-five);
     }
 
         #pricing .cards .card h6, 
@@ -352,34 +337,23 @@
         scroll-margin-top: 2rem;
     }
 
-    #contact .container {
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-        margin: auto;
-    }
-
     #contact form, .contact-info {
         background-color: #fff;
-        /* margin: auto; */
+        width: 95%;
+        margin: auto;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        /* align-items: center; */
         padding: 1rem;
     }
 
     #contact form label {
         color: var(--color-five);
-        /* text-align: center; */
         margin-bottom: 0.4rem;
     }
 
     #contact form textarea,
     input {
-        /* width: 95%; */
         margin-bottom: 1rem;
-        /* border: 1px solid red; */
     }
 
     #contact form input {
@@ -394,11 +368,6 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 40px;
-        /* border: 1px solid red; */
-    }
-
-    .details {
-        /* border: 1px solid red; */
     }
 
     .info-box h6 {
@@ -412,11 +381,22 @@
     .contact-icon {
         width: 20px;
         margin-right: 20px;
-        /* border: 1px solid red; */
     }
 }
 
 @media screen and (min-width:768px) {
+    #contact .container {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+
+    #contact form,
+    .contact-info {
+        margin: 0;
+    }
+
     #contact form {
         width: calc(100% - 400px)
     }
@@ -425,14 +405,6 @@
         margin-top: 0;
     }
 }
-
-/* @media screen and (min-width:1024px) {
-
-    #contact form textarea,
-    input {
-        width: 50%;
-    }
-} */
 
 /********** Footer **********/
 footer {
