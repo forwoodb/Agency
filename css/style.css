@@ -9,6 +9,7 @@
     --color-four: hsl(240, 0%, 35%);
     --color-five: hsl(240, 0%, 15%);
     --primary-color: hsl(201, 100%, 36%);
+    --secondary-color: hsl(215.38, 16.32%, 46.86%);
   }
 
   /* CSS Resets */
@@ -16,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
   }
 
   body {
@@ -35,13 +37,13 @@
     color: var(--color-three);
   }
 
-  h1,
+  /* h1,
   h2,
   h3,
   h4,
   h5 {
     color: var(--color-five);
-  }
+  } */
 
   h1 {
     font-size: 72px;
@@ -84,35 +86,57 @@
 /* Mobile Navbar */
 @media screen and (min-width: 0px) {
   header {
-    /* position: sticky;
-        top: 0; */
-
-    /* or */
-
     position: fixed;
     width: 100%;
-
     z-index: 2;
-  }
-
-  header h5,
-  a {
-    color: var(--color-one);
-  }
-
-  header h5 {
-    font-family: "Apple Chancery";
-    width: 160px;
-    line-height: 1.2;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
 
   nav {
+    background-color: white;
+  }
+
+  nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
-    /* border: 1px solid black; */
+    height: 5rem;
+    width: 95%;
+    margin: auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 14.25rem;
+    height: 4rem;
+  }
+
+  .logo .rectangle {
+    position: absolute;
+    width: 6rem;
+    height: 3rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  .logo .rectangle-sm {
+    height: 1rem;
+  }
+
+  .logo .line {
+    border-right: 1px solid black;
+  }
+
+  .logo .logo-text {
+    margin: auto;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  .logo .logo-text span {
+    color: black;
   }
 
   nav ul {
@@ -126,16 +150,14 @@
 
   nav ul.active {
     left: 0;
-    top: 6.5rem;
-    background-color: var(--primary-color);
+    top: 5rem;
+    background-color: white;
     opacity: 0.97;
   }
 
   nav ul li {
     margin: 1rem;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 700;
+    text-transform: capitalize;
   }
 
   /* Hamburger */
@@ -145,7 +167,7 @@
   }
 
   .bar {
-    background-color: var(--color-one);
+    background-color: black;
     height: 3px;
     width: 25px;
     margin: 5px;
@@ -154,7 +176,25 @@
 }
 
 /* Desktop Navbar */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 48rem) {
+  nav {
+    background-color: transparent;
+  }
+
+  .logo .rectangle {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+  }
+
+  .logo .line {
+    border-right: 1px solid white;
+  }
+
+  .logo .logo-text span {
+    color: white;
+  }
+
   nav ul {
     justify-content: center;
     align-items: center;
@@ -163,8 +203,34 @@
     flex-direction: row;
   }
 
+  nav ul li a {
+    color: white;
+  }
   .hamburger {
     display: none;
+  }
+
+  .scrolled {
+    background-color: white;
+  }
+
+  .scrolled a,
+  .scrolled .logo span {
+    color: #000;
+  }
+
+  .scrolled a:hover {
+    color: var(--color-honolulu-blue);
+  }
+
+  .scrolled .logo .rectangle {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  .scrolled .logo .line {
+    border-right: 1px solid black;
   }
 }
 
@@ -205,7 +271,8 @@
   .hero-text p,
   .hero-text a {
     text-align: center;
-    color: var(--color-one);
+    /* color: var(--color-one); */
+    color: white;
     margin: 1.2rem;
     z-index: 1;
   }
@@ -229,7 +296,7 @@
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 48rem) {
   .hero-text h2 {
     font-size: 60px;
   }
@@ -239,7 +306,8 @@
 /* Mobile */
 @media screen and (min-width: 0px) {
   #what-we-do {
-    background-color: var(--color-one);
+    /* background-color: var(--color-one); */
+    background-color: white;
     scroll-margin-top: 5.5rem;
   }
 
@@ -257,10 +325,12 @@
     margin: auto;
   }
 
-  .cards {
+  #what-we-do .cards {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
   }
 
   #what-we-do .cards .card {
@@ -275,6 +345,12 @@
 
   #what-we-do .cards .card h6 {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 24rem) {
+  #what-we-do .card {
+    width: 100%;
   }
 }
 
@@ -301,11 +377,11 @@
     margin-bottom: 20px;
   }
 
-  .cards {
+  /* .cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
+  } */
 
   #pricing .cards .card {
     background-color: var(--primary-color);
