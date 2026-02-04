@@ -10,6 +10,7 @@
     --color-five: hsl(240, 0%, 15%);
     --primary-color: hsl(201, 100%, 36%);
     --secondary-color: hsl(215.38, 16.32%, 46.86%);
+    /* --secondary-color: #62748e; */
   }
 
   /* CSS Resets */
@@ -80,6 +81,11 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .container {
+    width: 95%;
+    margin: auto;
+  }
 }
 
 /********** Navigation **********/
@@ -101,8 +107,6 @@
     justify-content: space-between;
     align-items: center;
     height: 5rem;
-    width: 95%;
-    margin: auto;
   }
 
   .logo {
@@ -271,7 +275,6 @@
   .hero-text p,
   .hero-text a {
     text-align: center;
-    /* color: var(--color-one); */
     color: white;
     margin: 1.2rem;
     z-index: 1;
@@ -292,7 +295,7 @@
   }
 
   .hero-text a:hover {
-    background-color: var(--color-three);
+    background-color: var(--secondary-color);
   }
 }
 
@@ -311,6 +314,13 @@
     scroll-margin-top: 5.5rem;
   }
 
+  #what-we-do .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .what-header,
   .what-header p {
     width: 95%;
@@ -326,29 +336,37 @@
   }
 
   #what-we-do .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
+    display: grid;
+    gap: 1rem;
   }
 
   #what-we-do .cards .card {
     background-color: var(--color-one);
     display: flex;
     flex-direction: column;
-    width: 20rem;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
+    /* width: 20rem; */
+    padding: 4rem 2rem;
+    /* margin: 1rem; */
+    /* text-align: center; */
+    border-radius: 8px;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
   }
 
   #what-we-do .cards .card h6 {
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
 }
 
-@media screen and (min-width: 24rem) {
+@media screen and (min-width: 48rem) {
+  #what-we-do .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+
   #what-we-do .card {
     width: 100%;
   }
